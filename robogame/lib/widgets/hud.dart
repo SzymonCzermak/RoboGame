@@ -6,14 +6,9 @@ import '/game/audio_manager.dart';
 import '/models/player_data.dart';
 import '/widgets/pause_menu.dart';
 
-// This represents the head up display in game.
-// It consists of, current score, high score,
-// a pause button and number of remaining lives.
 class Hud extends StatelessWidget {
-  // An unique identified for this overlay.
   static const id = 'Hud';
 
-  // Reference to parent game.
   final DinoRun game;
 
   const Hud(this.game, {super.key});
@@ -34,7 +29,7 @@ class Hud extends StatelessWidget {
                   selector: (_, playerData) => playerData.currentScore,
                   builder: (_, score, __) {
                     return Text(
-                      'Score: $score',
+                      'Wynik: $score',
                       style: const TextStyle(fontSize: 20, color: Colors.white),
                     );
                   },
@@ -43,7 +38,7 @@ class Hud extends StatelessWidget {
                   selector: (_, playerData) => playerData.highScore,
                   builder: (_, highScore, __) {
                     return Text(
-                      'High: $highScore',
+                      'Rekord: $highScore',
                       style: const TextStyle(color: Colors.white),
                     );
                   },

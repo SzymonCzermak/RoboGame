@@ -6,12 +6,9 @@ import '/widgets/hud.dart';
 import '/game/dino_run.dart';
 import '/widgets/settings_menu.dart';
 
-// This represents the main menu overlay.
 class MainMenu extends StatelessWidget {
-  // An unique identified for this overlay.
   static const id = 'MainMenu';
 
-  // Reference to parent game.
   final DinoRun game;
 
   const MainMenu(this.game, {super.key});
@@ -36,7 +33,7 @@ class MainMenu extends StatelessWidget {
                 spacing: 10,
                 children: [
                   const Text(
-                    'Dino Run',
+                    'RoboNova',
                     style: TextStyle(
                       fontSize: 50,
                       color: Colors.white,
@@ -49,7 +46,7 @@ class MainMenu extends StatelessWidget {
                       game.overlays.add(Hud.id);
                     },
                     child: const Text(
-                      'Play',
+                      'Graj',
                       style: TextStyle(
                         fontSize: 30,
                       ),
@@ -61,7 +58,7 @@ class MainMenu extends StatelessWidget {
                       game.overlays.add(SettingsMenu.id);
                     },
                     child: const Text(
-                      'Settings',
+                      'Ustawienia',
                       style: TextStyle(
                         fontSize: 30,
                       ),

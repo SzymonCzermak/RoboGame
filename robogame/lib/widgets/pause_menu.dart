@@ -9,12 +9,9 @@ import '/widgets/main_menu.dart';
 import '/game/audio_manager.dart';
 import '/models/player_data.dart';
 
-// This represents the pause menu overlay.
 class PauseMenu extends StatelessWidget {
-  // An unique identified for this overlay.
   static const id = 'PauseMenu';
 
-  // Reference to parent game.
   final DinoRun game;
 
   const PauseMenu(this.game, {super.key});
@@ -46,7 +43,7 @@ class PauseMenu extends StatelessWidget {
                         selector: (_, playerData) => playerData.currentScore,
                         builder: (_, score, __) {
                           return Text(
-                            'Score: $score',
+                            'Wynik: $score',
                             style: const TextStyle(
                                 fontSize: 40, color: Colors.white),
                           );
@@ -61,7 +58,7 @@ class PauseMenu extends StatelessWidget {
                         AudioManager.instance.resumeBgm();
                       },
                       child: const Text(
-                        'Resume',
+                        'Wznów',
                         style: TextStyle(
                           fontSize: 30,
                         ),
@@ -92,7 +89,7 @@ class PauseMenu extends StatelessWidget {
                         AudioManager.instance.resumeBgm();
                       },
                       child: const Text(
-                        'Exit',
+                        'Wyjdź',
                         style: TextStyle(
                           fontSize: 30,
                         ),
